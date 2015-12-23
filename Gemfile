@@ -1,6 +1,7 @@
 source "https://rubygems.org"
 
 gem "rails"
+gem "responders"
 gem "pg"
 gem "rabl"
 gem "oj"
@@ -9,7 +10,7 @@ group :development, :test do
   gem "byebug"
   gem "rspec-rails"
   gem "rspec"
-  gem "cucumber"
+  gem "rack-test"
 end
 
 group :test do

@@ -25,3 +25,16 @@ Then "I recieve that instrument's details as JSON" do
     @instrument.to_json
   )
 end
+
+When /^I POST to "([^"]*)"/ do |path|
+  @instrument_details = { 
+    name: "foo_instrument", description: "bar", price: "499.99" 
+  }
+  post path, @instrument_details
+end
+
+Then "I receive the created instrument as JSON" do
+  expect(last_response.body).to be_json_eql(@instrument_details.merge({
+    id: 1, amount: 0, reserved: 0
+  }).to_json)
+end

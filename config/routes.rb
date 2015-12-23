@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :instruments
+  resources :instruments, only: [:index, :show, :create, :destroy, :update]
 end

@@ -18,3 +18,9 @@ World(FactoryGirl::Syntax::Methods)
 JsonSpec.configure do
   exclude_keys "created_at", "updated_at"
 end
+
+module CapybaraApp
+  def app; Capybara.app; end
+end
+World(CapybaraApp)
+World(Rack::Test::Methods)
