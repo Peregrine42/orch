@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  resources :instruments, only: [:index, :show, :create, :destroy, :update]
+  root "welcome#index"
+  constraints :format => "json" do
+    resources :instruments, only: [:index, :show, :create, :destroy, :update]
+  end
 end

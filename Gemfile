@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
 gem "rails"
-gem "responders"
 gem "pg"
 gem "rabl"
 gem "oj"
