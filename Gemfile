@@ -21,5 +21,6 @@ group :test do
 end
 
 group :development do
+  gem "rack-cors"
   gem "web-console"
 end
