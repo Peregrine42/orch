@@ -19,6 +19,12 @@ class InstrumentsController < ApplicationController
     @instrument.update(instrument_params)
     render :show
   end
+  
+  def destroy
+    @instrument = Instrument.find(params[:id])
+    @instrument.destroy!
+    render :show
+  end
     
   private
   def instrument_params

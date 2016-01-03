@@ -11,17 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151223112821) do
+ActiveRecord::Schema.define(version: 20160103170737) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "instruments", force: :cascade do |t|
-    t.string  "name"
-    t.text    "description"
-    t.integer "amount",      default: 0
-    t.integer "reserved",    default: 0
-    t.decimal "price"
+    t.string  "name",        default: "Untitled"
+    t.text    "description", default: "No description"
+    t.integer "amount",      default: 0,                null: false
+    t.integer "reserved",    default: 0,                null: false
+    t.decimal "price",       default: 0.0
   end
 
 end
