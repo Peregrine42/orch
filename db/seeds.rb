@@ -7,4 +7,4 @@ FactoryGirl.find_definitions
 DatabaseCleaner.strategy = :truncation
 DatabaseCleaner.clean
 
-create_list(:instrument, 5)
+create_list(:instrument, 10)
