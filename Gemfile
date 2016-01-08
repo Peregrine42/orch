@@ -1,9 +1,9 @@
 source "https://rubygems.org"
 
 gem "rails"
-gem "pg"
 gem "rabl"
 gem "oj"
+gem "sqlite3"
 
 group :development, :test do
   gem "byebug"
